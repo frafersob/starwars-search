@@ -1,0 +1,9 @@
+<h2>Star Wars Movies</h2>
+
+<ul class="movies">
+  <li *ngFor="let movie of movies" (click)="onSelect(movie)">
+    <span class="badge">{{movie.title}}</span>
+  </li>
+</ul>
+
+<app-movie-detail [movie]="selectedMovie"></app-movie-detail>

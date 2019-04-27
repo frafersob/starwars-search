@@ -6,16 +6,20 @@ import { CharactersComponent } from './characters/characters.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 
 import { HttpClientModule }    from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

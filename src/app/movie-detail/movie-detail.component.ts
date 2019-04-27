@@ -3,6 +3,7 @@ import { Movie } from '../movie';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { MovieService }  from '../movie.service';
+import { HistoryService } from '../history.service';
 
 @Component({
   selector: 'app-movie-detail',
@@ -16,11 +17,16 @@ export class MovieDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private movieService: MovieService
+    private movieService: MovieService,
+    private historyService: HistoryService
   ) { }
 
   ngOnInit() {
     this.getMovie();
+    //Check if this is the full details page or being called from the All Movies page
+    if(this.route.snapshot.paramMap.get('id')){
+      this.historyService.add('Movie Details of Movie ' + this.route.snapshot.paramMap.get('id'))
+    };
   }
 
   getMovie(): void {

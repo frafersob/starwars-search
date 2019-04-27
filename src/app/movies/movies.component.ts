@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service'
+import { HistoryService } from '../history.service';
 
 @Component({
   selector: 'app-movies',
@@ -13,7 +14,8 @@ export class MoviesComponent implements OnInit {
 
   selectedMovie: Movie;
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService,
+              private historyService: HistoryService) { }
 
   getmovies(): void {
     this.movieService.getMovies()
@@ -26,6 +28,7 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit() {
     this.getmovies();
+    this.historyService.add('List of all movies');
   }
 
 }

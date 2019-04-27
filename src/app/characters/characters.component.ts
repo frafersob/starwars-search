@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from '../character';
 import { CharacterService } from '../character.service'
+import { HistoryService } from '../history.service';
 
 @Component({
   selector: 'app-characters',
@@ -13,7 +14,8 @@ export class CharactersComponent implements OnInit {
 
   selectedCharacter: Character;
 
-  constructor(private characterService: CharacterService) { }
+  constructor(private characterService: CharacterService,
+              private historyService: HistoryService) { }
 
   getCharacters(): void {
     this.characterService.getCharacters()
@@ -26,6 +28,7 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit() {
     this.getCharacters();
+    this.historyService.add('List of all characters');
   }
 
 }

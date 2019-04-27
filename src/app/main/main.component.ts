@@ -3,6 +3,7 @@ import { CharacterService } from '../character.service';
 import { Character } from '../character';
 import { MovieService } from '../movie.service';
 import { Movie } from '../movie';
+import { HistoryService } from '../history.service';
 
 @Component({
   selector: 'app-main',
@@ -15,11 +16,13 @@ export class MainComponent implements OnInit {
   movies: Movie[] = [];
  
   constructor(private characterService: CharacterService,
-              private movieService: MovieService) { }
+              private movieService: MovieService,
+              private historyService: HistoryService) { }
  
   ngOnInit() {
     this.getCharacters();
     this.getMovies();
+    this.historyService.add('Main Page');
   }
  
   getCharacters(): void {

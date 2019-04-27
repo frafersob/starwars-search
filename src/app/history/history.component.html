@@ -1,0 +1,8 @@
+<h2>Pages Visited</h2>
+<div *ngIf="historyService.history.length">
+
+    <button class="clear"
+            (click)="historyService.clear()">clear</button>
+    <div *ngFor='let page of historyService.history'> {{page}} </div>
+  
+  </div>

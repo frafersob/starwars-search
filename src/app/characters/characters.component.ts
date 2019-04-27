@@ -16,7 +16,8 @@ export class CharactersComponent implements OnInit {
   constructor(private characterService: CharacterService) { }
 
   getCharacters(): void {
-    this.characters = this.characterService.getCharacters();
+    this.characterService.getCharacters()
+      .subscribe(characters => this.characters = characters);
   }
 
   onSelect(character: Character): void{

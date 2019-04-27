@@ -22,7 +22,7 @@ import { HistoryComponent } from './history/history.component';
     MoviesComponent,
     MovieDetailComponent,
     MovieSearchComponent,
-    HistoryComponent
+    HistoryComponent,
   ],
   imports: [
     BrowserModule,

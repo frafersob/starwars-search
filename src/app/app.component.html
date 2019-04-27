@@ -1,8 +1,11 @@
-<h1>{{title}}</h1>
-<nav>
-    <a routerLink="/main">Main Page</a>
-    <a routerLink="/characters">All Characters</a>
-    <a routerLink="/movies">All Movies</a>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/main">{{title}}</a>
+    <a class="flex-sm-fill text-sm-center nav-link" routerLink="/characters">All Characters</a>
+    <a class="flex-sm-fill text-sm-center nav-link" routerLink="/movies">All Movies</a>
 </nav>
+<br>
 <router-outlet></router-outlet>
+<br>
 <app-history></app-history>
+</div>

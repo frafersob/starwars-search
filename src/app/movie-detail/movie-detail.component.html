@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngIf="movie">
+    <h2>{{movie.title}} details</h2>
+    <div class="card">
+      <div class="card-body">
+        <div class="h3 card-title">{{movie.title}}</div>
+        <div class="card-subtitle mb-2 text-muted">Star Wars Movie</div>
+        <div class="card-text"><span>Episode: </span>{{movie.episode_id}}</div>
+        <div class="card-text"><span>Director: </span>{{movie.director}}</div>
+        <div class="card-text"><span>Producer: </span>{{movie.producer}}</div>
+        <div class="card-text"><span>Release Date: </span>{{movie.release_date}}</div>
+      </div>
+  </div>
+</div>

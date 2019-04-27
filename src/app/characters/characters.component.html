@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Star Wars Characters</h2>
+
+  <div class="list-group">
+      <a class="list-group-item list-group-item-action" *ngFor="let character of characters" (click)="onSelect(character)">
+        <span>{{character.name}}</span>
+      </a>
+  </div>
+
+  <br>
+
+<app-character-detail [character]="selectedCharacter"></app-character-detail>
+</div>

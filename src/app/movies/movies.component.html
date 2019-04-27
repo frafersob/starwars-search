@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Star Wars Movies</h2>
+  
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action" *ngFor="let movie of movies" (click)="onSelect(movie)">
+          <span>{{movie.title}}</span>
+        </a>
+    </div>
+  
+    <br>
+  
+  <app-movie-detail [movie]="selectedMovie"></app-movie-detail>
+</div>

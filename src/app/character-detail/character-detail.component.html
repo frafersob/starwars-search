@@ -1,0 +1,15 @@
+<div class="container">
+    <div *ngIf="character">
+      <h2>{{character.name}} details</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="h3 card-title">{{character.name}}</div>
+          <div class="card-subtitle mb-2 text-muted">Star Wars Character</div>
+          <div class="card-text"><span>Gender: </span>{{character.gender}}</div>
+          <div class="card-text"><span>Hair Color: </span>{{character.hair_color}}</div>
+          <div class="card-text"><span>Height: </span>{{character.height}}cm</div>
+          <div class="card-text"><span>Weight: </span>{{character.mass}}kg</div>
+        </div>
+    </div>
+  </div>
+  

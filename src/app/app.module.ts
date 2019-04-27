@@ -8,13 +8,17 @@ import { CharacterDetailComponent } from './character-detail/character-detail.co
 import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     CharacterDetailComponent,
-    MainComponent
+    MainComponent,
+    MoviesComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

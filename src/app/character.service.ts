@@ -24,4 +24,14 @@ export class CharacterService {
         map((characters:any) => characters.results)
       )
   }
+
+  getCharacter(id: number): Observable<Character> {
+    //We use HttpClient to get characters from the API
+    return this.http.get<Character>(this.charactersURL + id)
+      .pipe(
+        //Star Wars API returns 
+        //Used any to avoid warning over unserialized property
+        map((character:any) => character)
+      )
+  }
 }

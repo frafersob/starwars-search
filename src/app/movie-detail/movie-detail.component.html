@@ -1,3 +1,9 @@
-<p>
-  movie-detail works!
-</p>
+<button (click)="goBack()">Return</button>
+<div *ngIf="movie">
+  <h2>{{movie.title}} details</h2>
+      <div><span>Title: </span>{{movie.title}}</div>
+      <div><span>Episode: </span>{{movie.episode_id}}</div>
+      <div><span>Director: </span>{{movie.director}}</div>
+      <div><span>Producer: </span>{{movie.producer}}</div>
+      <div><span>Release Date: </span>{{movie.release_date}}</div>
+  </div>
